@@ -8,7 +8,7 @@ const Search = () => {
   const handleChange = e => {
     setQuery(e.target.value);
     let newArr;
-    if (query.length > 4) {
+    if (query.length > 3) {
       newArr = postalCode.filter(i => i.includes(query));
       setFilterData(newArr);
     }
@@ -16,12 +16,16 @@ const Search = () => {
 
   return (
     <div>
+      <label>Postalcode</label>
       <input
+        type="number"
         placeholder="Search Postalcode"
         value={query}
         onChange={handleChange}
       />
-      {console.log(fiterData)}
+      {fiterData.map(cuurVal => {
+        return <li>{cuurVal}</li>;
+      })}
     </div>
   );
 };
