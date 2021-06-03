@@ -23,6 +23,7 @@ const Search = () => {
         value={query}
         onChange={handleChange}
       />
+      <li>suggestion </li>
       {fiterData.map(cuurVal => {
         return <li>{cuurVal}</li>;
       })}
