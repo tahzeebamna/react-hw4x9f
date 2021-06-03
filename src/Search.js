@@ -8,7 +8,7 @@ const Search = () => {
   const handleChange = e => {
     setQuery(e.target.value);
     let newArr;
-    if (query.length > 3) {
+    if (query.length > 2) {
       newArr = postalCode.filter(i => i.includes(query));
       setFilterData(newArr);
     }
